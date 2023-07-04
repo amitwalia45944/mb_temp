@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My First Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+
+}
+:root{
+    --primary-text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#183b56;
+    --padding-inline-section:20px;
+
+}
+body 
+{
+    font-family: "Poppins","sans-serif";
+    color: var(--primary-text-color);
+}
+h1 {
+    font-size:3rem;
+}
+h2 {
+    font-size:2rem;
+}
+p {
+    font-family:"Roboto","sans-serif"
+    font-size 1.25rem;
+    color:var(--secondary-text-color);
+    line-height:1.8rem;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style: None;
+}
+.small-bold-text {
+    font-size: 1rem;
+    font-weight:700
+}
+.container{
+    max-width:1180px;
+    margin-inline:auto;
+    padding-inline: var(-secondary-text-color);
+}
+.flex{
+    display:flex;
+    align-items: center;
+}
+.top-banner{
+    
+    background-image: url("./images/asset 3.jpeg");
+}
+.banner-text{
+    color: white;
+    padding: 15px 30px;
+    text-align:center;
+}
+.company-logo{
+    width: 200px;
+}
+.main-nav{
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.nav-links{
+    flex-basis: 730px;
+}
+.hover-links:hover{
+    color:red
+   
+}
+.primary-button{
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight:700;
+    color:white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+}
+.primary-button:hover{
+    background-color: var(--accent-color);
+    color: red;
+}
+.third-button{
+    background-color: rgba(25, 65, 21, 14);
+    border-radius: 6px;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:aquamarine;
+    padding: 12px 24px;
+}
+.companies-header{
+    text-align:center;
+    margin-block: 30px;
+    color:var(--primary-text-color);
+}
+.logos{
+    justify-content: space-between;
+}
+.logo{
+    height:48px;
+    flex-wrap: wrap;
+}
+.features-section{
+    padding:80px var(--padding-inline-section) 0;
+    
+}
+.features-header{
+    text-align: center;
+}
+.features-heading-text{
+margin-bottom: 20px;
+}
+.features-area{
+    flex-wrap:wrap;
+    gap:40px;
+    margin-top: 40px;
+    justify-content: space-between;
+    
+}
+.features-card{
+    flex-direction: column;
+    gap: 20px;
+    max-width: 30%;
+    text-align: center;
+}
+ul{
+    justify-content: end;
+    gap : 40px;
+
+}
+.big-feature-section{
+    margin-top: 40px;
+}
+.big-feature-container{
+
+}
+.big-feature-left img{
+    width:100%;
+}
+.big-feature-right{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer_nav{
+    text-align: center;
+    justify-content: space-between;
+}
+.footer-nav-link{
+    justify-content: end;
+    gap: 40px;
+    {{!-- flex-direction: column; --}}
+}
+.footer-nav-link1{
+    
+    flex-direction: column;
+    gap: 10px;
+}
+
+</style>
+  
+</head>
+
+<body>
+
+  {{{body}}}
+  <script src="https://kit.fontawesome.com/91c8f5bb73.js" crossorigin="anonymous"></script>
+  <script>
+    var axios = require('axios');
+var data = JSON.stringify({
+    "collection": "radha_krishn",
+    "database": "test",
+    "dataSource": "Cluster0",
+    "projection": {
+        "_id": 1
+    }
+});
+            
+var config = {
+    method: 'post',
+    url: 'https://ap-south-1.aws.data.mongodb-api.com/app/data-iyjgx/endpoint/data/v1/action/findOne',
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Request-Headers': '*',
+      'api-key': 'CkK9rRguAh0vnHTGMd5Et76TtVyukAT5ev00urz5g0zu6pb3fBWTnjfrhsc7h31R',
+    },
+    data: data
+};
+            
+axios(config)
+    .then(function (response) {
+        console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+  </script>
+</body>
+
+</html>
